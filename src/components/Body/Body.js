@@ -1,19 +1,22 @@
 import Gallery_Select from '../gallery/Gallery_Select'
 import PropTypes from 'prop-types'
 import Form from '../Form/Form'
+import { useState } from 'react'
 const Body = ({ data_harry }) => {
+
+  const [filtredChar, setFiltredChar] = useState("all")
   
+  console.log(filtredChar)
 
   return (
-    <div>
+    <div className="contenu">
       <form>
         <label>Maisons de Poudlard</label>
-          <Form data={data_harry} />
+          <Form  setFiltredChar={setFiltredChar} filtredChar={filtredChar}/>
       </form>
-      <Gallery_Select data={data_harry} />
-      {//data_harry.map((person) => <Gallery key={person.nom} {...person} />)
-      }
-
+   <div>
+      <Gallery_Select data={data_harry} filtredChar={filtredChar}/>
+      </div>
     </div>
   )
 }

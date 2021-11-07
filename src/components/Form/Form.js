@@ -1,33 +1,30 @@
 import PropTypes from 'prop-types'
-import { useState } from 'react';
-import Select from 'react-select';
 
-const Form = ({data}) => {
-  const maisons = [];
-  for (let i = 0; i < data.length; i++) {
-    maisons[i] = data[i].maison;
-  }
-  const maison_select = [...new Set(maisons)];
+const Form = ({ setFiltredChar, filtredChar }) => {
 
+const handleChange = (e) => {
+  setFiltredChar(e.target.value)
 
+} 
 
 const options = [
+  { value: 'all', label: 'all'},
   { value: 'Gryffindor', label: 'Gryffindor'},
   { value: 'Hufflepuff', label: 'Hufflepuff'},
   { value: 'Ravenclaw', label: 'Ravenclaw'},
   { value: 'Slytherin', label: 'Slytherin'},
 ]
-
-const [selectedOption, setSelectedOption] = useState(null)
-
   return (
     
 <div className="filter">
-    <Select
-      defaultValue={selectedOption}
-      onChange={setSelectedOption}
-      options={options}
-      />
+    <select value={filtredChar} onChange={handleChange}>
+      {
+        options.map((option) =>
+        <option key={option.value} value={option.value}>{option.label}</option>  
+        )
+      }
+
+    </select>
     </div>
   )
 

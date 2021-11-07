@@ -3,7 +3,7 @@ import './styles.css';
 import Header from '../Header/Header'
 import Body from '../Body/Body';
 import HarryPotter from "../data/Data"
-
+import Footer from '../Footer/Footer';
 // == Composant
 const App = () => 
 {
@@ -14,6 +14,7 @@ const App = () =>
   <div className="app">
     <Header />
   <Body data_harry = {HarryPotter}/>
+  <Footer />
   </div>
 );
 }

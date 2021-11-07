@@ -1,11 +1,22 @@
 import PropTypes from 'prop-types'
 import Gallery from './gallery'
 
-const Gallery_Select = ({data}) => {
+const Gallery_Select = ({data, filtredChar}) => {
+
+  const filter = data.filter((person) => person.maison === filtredChar)
+
+  console.log(filter)
+
+
  
   return (
     <>
-      {data.map((person) => <Gallery key={person.nom} {...person} />)
+      {
+       filtredChar === "all" ? data.map((person) => <Gallery key={person.nom} {...person} />)
+
+       : 
+
+       filter.map((person) => <Gallery key={person.nom} {...person} />)
       }
     </>
   )

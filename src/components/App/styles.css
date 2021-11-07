@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fruktur&family=Itim&display=swap');
+
+
+body{  background-image: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2574&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+  min-height: 100vh;
+ 
+}
+h1{
+  font-size: 5em;
+  font-family: 'Fruktur', cursive;
+  padding: 10%;
+  text-align: center;
+}
+.app{
+  max-width: 1920px;
+  margin: auto;
+}
+.contenu>div{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20%;
+
+}
+.house{
+  width: 25%;
+  position: relative;
+  bottom: 150px;
+}
+form{
+  display: flex;
+justify-content: center;
+align-items: center;
+padding: 5%;
+font-family: 'Itim', cursive;
+
+}
+label{
+  font-size: 2em;
+  width: 30%;
+}
+.filter{
+  width: 70%;
+}
+select{
+  width: 100%;
+  padding: 1%;
+  font-size: 1.2em;
+  font-family: 'Itim', cursive;
+
+}
+select:hover{
+  background-color: black;
+  color: white;
+}
+
+h2{
+  font-size: 2em;
+  margin-bottom: 3%;
+}
+footer{
+  text-align: center;
+  border-top: white 1px solid;
+  padding: 2%;
+}
